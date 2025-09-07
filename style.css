@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(52.5% 100% at 50% 0%, #474851 0%, #191A22 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4facfe;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0288d1;
+}
+
+.next-btn {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  margin-top: 24px;
+  transition: background 0.2s;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+.next-btn:hover {
+  background: #e65100;
+}
+
+/* Large screens (notebook/desktop) */
+@media (min-width:1024px) {
+  h1 {
+    font-size: 3.4rem;
+  }
+  button {
+    padding: 14px 28px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Tablet */
+@media (min-width:768px) and (max-width:1023px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+  button {
+    padding: 12px 26px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width:767px) {
+  body {
+    padding: 16px;
+  }
+  .hero {
+    width: 100%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  button {
+    padding: 10px 18px;
+    font-size: 1rem;
+    transform: translateY(20px);
+  }
+}

@@ -1,0 +1,59 @@
+/* Asosiy stillar */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('./family.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Tugadi animatsiyasi */
+.finish-anim {
+  font-size: 2.5rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border-radius: 12px;
+  padding: 24px 32px;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+  margin-top: 40px;
+}
+
+/* Notebook/desktop uchun */
+@media (min-width: 1024px) {
+  .finish-anim {
+    font-size: 2.5rem;
+    padding: 24px 32px;
+  }
+}
+
+/* Planshet uchun */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .finish-anim {
+    font-size: 2rem;
+    padding: 18px 24px;
+  }
+}
+
+/* Telefon uchun */
+@media (max-width: 767px) {
+  body {
+    padding: 12px;
+    min-height: 100vh;
+  }
+  .finish-anim {
+    font-size: 1.2rem;
+    padding: 12px 14px;
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./family2.css">
+</head>
+<body>
+    <div id="finish-message" style="display:none; text-align:center; margin-top:120px;">
+        <h1 class="finish-anim">Mana shu bilan tugadi</h1>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const msg = document.getElementById('finish-message');
+            msg.style.display = 'block';
+            msg.querySelector('h1').style.opacity = 0;
+            msg.querySelector('h1').style.transform = 'translateY(40px)';
+            setTimeout(() => {
+                msg.querySelector('h1').style.transition = 'all 0.8s cubic-bezier(.68,-0.55,.27,1.55)';
+                msg.querySelector('h1').style.opacity = 1;
+                msg.querySelector('h1').style.transform = 'translateY(0)';
+            }, 50);
+        }, 5000);
+    </script>
+</body>
+</html>
